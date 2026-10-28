@@ -1,0 +1,200 @@
+{
+  "recorded_date": "2026-10-09",
+  "timezone": "Asia/Taipei",
+  "endpoint": "https://api.anysearch.com/mcp",
+  "evidence_type": "validation-relevant projection of successful initialize and tools/list; descriptions omitted",
+  "initialize_status": "PASS",
+  "initialized_notification_http_status": 202,
+  "tools_list_status": "PASS",
+  "protocolVersion": "2025-03-26",
+  "serverInfo": {
+    "name": "anysearch-mcp-server",
+    "version": "1.0.0"
+  },
+  "tools": [
+    {
+      "name": "batch_search",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "queries": {
+            "type": "array",
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          }
+        },
+        "required": [
+          "queries"
+        ]
+      }
+    },
+    {
+      "name": "extract",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url",
+          "title",
+          "content"
+        ]
+      }
+    },
+    {
+      "name": "get_sub_domains",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "enum": [
+              "academic",
+              "agriculture",
+              "business",
+              "code",
+              "energy",
+              "environment",
+              "film",
+              "finance",
+              "gaming",
+              "general",
+              "health",
+              "ip",
+              "legal",
+              "resource",
+              "security",
+              "social_media",
+              "travel"
+            ]
+          },
+          "domains": {
+            "type": "array",
+            "maxItems": 5,
+            "items": {
+              "type": "string",
+              "enum": [
+                "academic",
+                "agriculture",
+                "business",
+                "code",
+                "energy",
+                "environment",
+                "film",
+                "finance",
+                "gaming",
+                "general",
+                "health",
+                "ip",
+                "legal",
+                "resource",
+                "security",
+                "social_media",
+                "travel"
+              ]
+            }
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "search",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "max_results": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 10,
+            "default": 10
+          },
+          "domain": {
+            "type": "string",
+            "enum": [
+              "academic",
+              "agriculture",
+              "business",
+              "code",
+              "energy",
+              "environment",
+              "film",
+              "finance",
+              "gaming",
+              "general",
+              "health",
+              "ip",
+              "legal",
+              "resource",
+              "security",
+              "social_media",
+              "travel"
+            ]
+          },
+          "sub_domain": {
+            "type": "string"
+          },
+          "sub_domain_params": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": true
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ],
+  "caution": "Tool discovery is not a business-tool test; annotations are contradictory and are not overridden."
+}

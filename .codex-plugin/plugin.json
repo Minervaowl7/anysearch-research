@@ -1,0 +1,36 @@
+{
+  "author": {
+    "name": "AnySearch Research contributors"
+  },
+  "description": "Independent AnySearch integration for public web research, parallel searches, source verification, and Chinese/English prior-art evidence comparison.",
+  "interface": {
+    "brandColor": "#2563EB",
+    "capabilities": [
+      "Read"
+    ],
+    "category": "Productivity",
+    "composerIcon": "./assets/icon.png",
+    "defaultPrompt": [
+      "Use AnySearch to find Chinese and English sources on this technical topic, with original links and publication dates.",
+      "Use AnySearch to search for a single prior-art document disclosing every feature of the following novelty claim.",
+      "Use AnySearch to search five distinct angles in parallel, deduplicate the findings and verify the most relevant pages."
+    ],
+    "developerName": "AnySearch Research contributors",
+    "displayName": "AnySearch Research",
+    "logo": "./assets/logo.png",
+    "longDescription": "使用 AnySearch 托管服务进行网页检索、最多五路批量检索、垂直领域发现与网页正文提取。包含来源核验、公开日期辨析和单篇对比文件特征比对工作流。独立集成，非 AnySearch 官方出品；匿名额度和服务可用性由提供方决定。",
+    "shortDescription": "网页检索、并行研究与科技查新"
+  },
+  "keywords": [
+    "anysearch",
+    "search",
+    "research",
+    "prior-art",
+    "科技查新"
+  ],
+  "license": "MIT",
+  "mcpServers": "./.mcp.json",
+  "name": "anysearch-research",
+  "skills": "./skills",
+  "version": "1.1.1"
+}

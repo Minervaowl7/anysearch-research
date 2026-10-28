@@ -1,0 +1,5 @@
+Package 1.1.1 offline checks
+37 regression tests passed; failures=0; errors=0.
+Package validation passed.
+Tests include feedback bounds, additive tools, changed annotation values, behavior execution records, asset dimensions and reproducible archives.
+Offline checks do not execute the model workflow or establish service quality.

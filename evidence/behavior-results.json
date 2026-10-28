@@ -1,0 +1,44 @@
+[
+  {
+    "case_id": "batch-five",
+    "date": "2026-10-28",
+    "status": "PARTIAL",
+    "observation": "A two-member general batch returned usable results. Five-member operation was not tested."
+  },
+  {
+    "case_id": "vertical-discovery",
+    "date": "2026-10-28",
+    "status": "PARTIAL",
+    "observation": "Domain discovery returned current academic, code and ip capabilities. Subsequent academic/ip search batch failed at transport."
+  },
+  {
+    "case_id": "extract-html",
+    "date": "2026-10-28",
+    "status": "PASS",
+    "observation": "Public repository HTML was extracted with readable content."
+  },
+  {
+    "case_id": "feedback-transport",
+    "date": "2026-10-28",
+    "status": "PARTIAL",
+    "observation": "One earlier feedback submission was acknowledged queued; a later submission failed at transport. Database persistence and complete workflow acceptance were not established."
+  },
+  {
+    "case_id": "hybrid-search",
+    "date": "2026-10-28",
+    "status": "PARTIAL",
+    "observation": "A mixed batch with one general, one academic.paper and one ip.global query succeeded. This validates mixed-route execution; same-topic evidence quality was not fully assessed."
+  },
+  {
+    "case_id": "feedback-final-remainder",
+    "date": "2026-10-28",
+    "status": "PASS",
+    "observation": "Three successful batch-member identifiers were submitted together before this turn ended; response acknowledged three queued and zero rejected. Persistence was not verified."
+  },
+  {
+    "case_id": "vertical-discovery",
+    "date": "2026-10-28",
+    "status": "PASS",
+    "observation": "Current academic/ip discovery was followed by valid academic.paper and ip.global queries with usable structured returns. The patent result had a publication number but no direct source URL."
+  }
+]
